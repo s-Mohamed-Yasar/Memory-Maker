@@ -31,10 +31,7 @@ function EditCardPage() {
   async function submit(event){
     event.preventDefault()
     try {
-      const res = await axios.patch(
-        `${import.meta.env.VITE_REACT_APP_API_URL}${del_card_id}`,
-        formEditData
-      );
+      const res = await axios.patch(`/api/data/${del_card_id}`, formEditData);
       //console.log(res.data.message);
 
       setPopUp(res.data.message);

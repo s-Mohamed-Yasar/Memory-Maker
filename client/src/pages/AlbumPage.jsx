@@ -22,7 +22,7 @@ function AlbumPage() {
 
   useEffect(() => {
     async function getData() {
-      const response = await axios.get(import.meta.env.VITE_REACT_APP_API_URL);
+      const response = await axios.get("/api/data/");
 
       setAlbumData(response.data);
 

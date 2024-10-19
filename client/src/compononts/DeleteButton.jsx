@@ -5,9 +5,7 @@ import axios from "axios";
 function DeleteButton(props) {
   async function Delete() {
     try {
-      const res = await axios.delete(
-        `${import.meta.env.VITE_REACT_APP_API_URL}${props.id}`
-      );
+      const res = await axios.delete(`/api/data/${props.id}`);
       console.log(res);
       await props.clicked();
     } catch (error) {
